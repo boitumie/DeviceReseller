@@ -10,7 +10,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/registerstyle.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/registerstyle.css"> 
 </head>
 
 <body>
@@ -65,7 +65,7 @@
             <label for="photos">Upload Photos</label>
             <input type="file" id="photos" name="photos" class="form-control" accept="image/*" multiple>
         </div>
-        <!-- Send to WhatsApp -->
+      
         <button type="button" onclick="sendToWhatsApp()" class="btn-register">Complete</button>
     </form>
 </div>
@@ -78,7 +78,7 @@
         const phone = document.getElementById('phone').value;
         const price = document.getElementById('price').value;
 
-        // Construct the WhatsApp message
+      
         const message = `Hello,%0A%0AHere are my details:%0A%0A` +
             `Full Name: ${name}%0A` +
             `ID Number: ${idno}%0A` +
@@ -87,8 +87,8 @@
             `Asking Price: ${price}%0A%0A` +
             `Thank you!`;
 
-        // Send the message via WhatsApp
-        const whatsappNumber = "27786509483"; // Use international format without '+'
+       
+        const whatsappNumber = "27786509483";
         const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
         window.open(whatsappUrl, '_blank');
     }
