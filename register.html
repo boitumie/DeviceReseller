@@ -10,7 +10,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/registerstyle.css"> 
+    <link rel="stylesheet" href="css/registerstyle.css"> <!-- Link to external CSS file -->
 </head>
 
 <body>
@@ -74,7 +74,7 @@
     const phone = document.getElementById('phone').value;
     const description = document.getElementById('description').value;
 
-    
+
     const message = `Hello,%0A%0AHere are my details:%0A%0A` +
         `Full Name: ${name}%0A` +
         `ID Number: ${idno}%0A` +
@@ -84,7 +84,7 @@
         `Thank you!`;
 
     
-    const whatsappNumber = "27786509483"; 
+    const whatsappNumber = "27602764372"; 
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
 }
