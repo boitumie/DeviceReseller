@@ -2,99 +2,51 @@
 <html lang="en">
 
 <head>
-    <title>Buy a device</title>
+    <title>Buy a Device</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <!-- Stylesheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/registerstyle.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="css/registerstyle.css">
 </head>
 
 <body>
-    <!-- Navbar -->
-    <nav class="navbar custom-navbar navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle Navigation">
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                    <span class="icon icon-bar"></span>
-                </button>
-                <a href="index.html" class="navbar-brand">
-                    <img src="images/logo.png" alt="TUT Logo">
-                    Buy a device
-                </a>
-            </div>
+  
+<nav class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle Navigation">
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+                <span class="icon icon-bar"></span>
+            </button>
+            <a href="index.html" class="navbar-brand">
+                <img src="images/logo.png" alt="Logo">
+                Buy a Device
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html" class="smoothScroll">Home</a></li>
+                <li><a href="login.html" class="smoothScroll">Login</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="index.html" class="smoothScroll">Home</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Registration Form -->
-<div class="registration-form">
-    <h2>Register Here</h2>
-    <form id="registrationForm">
-        <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
-        </div>
-        <div class="form-group">
-            <label for="idno">ID Number</label>
-            <input type="text" id="idno" name="idno" class="form-control" placeholder="Enter your ID number" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-        </div>
-        <div class="form-group">
-            <label for="phone">Cell Phone Number</label>
-            <input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your cell phone number" required>
-        </div>
-<div class="form-group">
-    <label for="description">Description of the Device You Want</label>
-    <textarea id="description" name="description" class="form-control" placeholder="Enter a description of the device you want" rows="4" required></textarea>
-</div>
-        <!-- Send to WhatsApp -->
-        <button type="button" onclick="sendToWhatsApp()" class="btn-register">Complete</button>
-    </form>
+<div class="container devices-container">
+    <h2>Available Devices</h2>
+    <div class="row" id="devices-list">
+    </div>
 </div>
 
-<script>
-    function sendToWhatsApp() {
-    const name = document.getElementById('name').value;
-    const idno = document.getElementById('idno').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const description = document.getElementById('description').value;
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
+<script src="js/devices.js"></script>
 
-    const message = `Hello,%0A%0AHere are my details:%0A%0A` +
-        `Full Name: ${name}%0A` +
-        `ID Number: ${idno}%0A` +
-        `Email: ${email}%0A` +
-        `Cell Phone: ${phone}%0A` +
-        `Device Description: ${description}%0A%0A` +
-        `Thank you!`;
-
-    
-    const whatsappNumber = "27602764372"; 
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
-}
-
-</script>
-
-
-    <!-- Scripts -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
